@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+# IntelliJ project files
+.idea
+*.iml
+/dist
+/package-lock.json
+__pycache__/
+/.home/
+/node_modules/
+/npm-debug.log

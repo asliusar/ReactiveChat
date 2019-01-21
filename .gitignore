@@ -27,3 +27,8 @@ backend/.nb-gradle/
 backend/.mvn
 .git
 .vscode
+
+frontend/dist
+frontend/package-lock.json
+frontend/node_modules/
+frontend/npm-debug.log
