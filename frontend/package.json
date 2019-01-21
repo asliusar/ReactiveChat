@@ -1,5 +1,5 @@
 {
-  "name": "near",
+  "name": "chat",
   "version": "0.1.0",
   "description": "",
   "main": "app.tsx",
@@ -15,9 +15,9 @@
     "@babel/runtime": "7.0.0-beta.55",
     "instascan": "1.0.0",
     "moment": "^2.22.1",
-    "react": "^16.7.0-alpha.2",
+    "react": "^v16.8.0-alpha.1",
     "react-d3-tree": "^1.12.1",
-    "react-dom": "^16.7.0-alpha.2",
+    "react-dom": "^v16.8.0-alpha.1",
     "react-google-maps": "9.4.5",
     "react-redux": "5.0.7",
     "react-swipeable-views": "0.12.13",

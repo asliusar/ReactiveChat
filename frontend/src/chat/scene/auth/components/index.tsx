@@ -1,20 +1,21 @@
 import { WithStyles, withStyles } from '@material-ui/core/styles';
 import * as React from 'react';
 import { styles } from './styles';
+import {useState} from 'react';
 
 interface AuthBlockProps {
-    login: (userName: string) => void
+    loginUser: (userName: string) => void
 }
 
 const AuthBlock = (props: AuthBlockProps & WithStyles<any>) => {
-    const [userName, setUserName] = React.useState('');
+    const [userName, setUserName] = useState('');
 
     return (
         <div className={props.classes.container}>
             <input type='text' value={userName} 
                 onChange={(event) => setUserName(event.target.value)}
             />
-            <button onClick={() => props.login(userName)}>
+            <button onClick={() => props.loginUser(userName)}>
                 Login
             </button>
         </div>

@@ -8,8 +8,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import { CUSTOM_THEME } from './theme';
-import MainContainer from './MainContainer';
 import state from './chat/redux';
+import Chat from './chat/containers';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);
@@ -27,7 +27,7 @@ const rootEl = document.getElementById('root');
 ReactDOM.render(
     <Provider store={store}>
         <MuiThemeProvider theme={CUSTOM_THEME}>
-            <MainContainer />
+            <Chat />
         </MuiThemeProvider>
     </Provider>,
     rootEl

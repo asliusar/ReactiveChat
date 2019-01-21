@@ -4,6 +4,7 @@ import {styles} from './styles';
 import { User } from '../scene/auth/state';
 import { Message } from '../state';
 import MessageInputBlock from './MessageInputBlock';
+import AuthBlock from './../scene/auth/containers';
 
 interface ChatProps {
     user: User,
@@ -18,7 +19,7 @@ const Chat = (props: ChatProps & WithStyles<any>) => (
         {
             props.user 
             ? <MessageInputBlock sendMessage={props.sendMessage} />
-            : <AuthPanel /> 
+            : <AuthBlock /> 
         }
     </div>
 );
