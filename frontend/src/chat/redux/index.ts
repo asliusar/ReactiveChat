@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import { ACTION_TYPE } from '../actions';
 import ChatState from '../state';
+import authReducer from '../scene/auth/redux';
 
 const chatReducer = (state = ChatState, action: any) => {
     switch (action.type) {

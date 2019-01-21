@@ -20,8 +20,6 @@ const MessageInputBlock = (props: MessageInputBlockProps & WithStyles<any>) => {
             </button>
         </div>
     ) 
-    
-
 };
 
 export default withStyles(styles)(MessageInputBlock);

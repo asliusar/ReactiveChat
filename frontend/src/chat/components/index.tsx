@@ -3,12 +3,12 @@ import { WithStyles, withStyles } from '@material-ui/core/styles';
 import {styles} from './styles';
 import { User } from '../scene/auth/state';
 import { Message } from '../state';
-import MessageInputBlock from './MessageInputPanel';
+import MessageInputBlock from './MessageInputBlock';
 
 interface ChatProps {
     user: User,
     messages: Array<Message>,
-    sendMessage: (message: Message) => void
+    sendMessage: (message: string) => void
 }
 
 const Chat = (props: ChatProps & WithStyles<any>) => (
@@ -17,7 +17,7 @@ const Chat = (props: ChatProps & WithStyles<any>) => (
         </div>
         {
             props.user 
-            ? <MessageInputBlock sendMessage={props.sendMessage}/>
+            ? <MessageInputBlock sendMessage={props.sendMessage} />
             : <AuthPanel /> 
         }
     </div>
