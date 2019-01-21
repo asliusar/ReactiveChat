@@ -1,16 +1,25 @@
 import * as React from 'react';
-import Paper from 'material-ui/Paper';
-import Table from 'material-ui/Table';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
-import TableBody from '@material-ui/core/TableBody';
 import { WithStyles, withStyles } from '@material-ui/core/styles';
 import {styles} from './styles';
+import { User } from '../scene/auth/state';
+import { Message } from '../state';
+import MessageInputBlock from './MessageInputPanel';
 
-const Chat = (props: WithStyles<any>) => (
-    <div className={props.classes.root}>
+interface ChatProps {
+    user: User,
+    messages: Array<Message>,
+    sendMessage: (message: Message) => void
+}
 
+const Chat = (props: ChatProps & WithStyles<any>) => (
+    <div className={props.classes.container}>
+        <div className={props.classes.messages}>
+        </div>
+        {
+            props.user 
+            ? <MessageInputBlock sendMessage={props.sendMessage}/>
+            : <AuthPanel /> 
+        }
     </div>
 );
   

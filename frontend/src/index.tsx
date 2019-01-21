@@ -9,13 +9,13 @@ import thunk from 'redux-thunk';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import { CUSTOM_THEME } from './theme';
 import MainContainer from './MainContainer';
+import state from './chat/redux';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);
 
 const store = createStore(
-    combineReducers({
-    }),
+    state,
     composeWithDevTools(
         applyMiddleware(middleware)
     ),
