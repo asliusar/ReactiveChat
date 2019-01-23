@@ -12,7 +12,6 @@ import java.util.List;
 
 @Service
 public class MessageService {
-
     private Logger logger = LoggerFactory.getLogger(MessageService.class);
 
     @Autowired
