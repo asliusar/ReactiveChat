@@ -22,7 +22,7 @@ public class MessageService {
         return messageRepository.findAll();
     }
 
-    public void addMessage(Message message) {
+    public void saveMessage(Message message) {
         messageRepository.save(message);
     }
 }

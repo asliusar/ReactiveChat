@@ -5,14 +5,11 @@ import com.example.doodlechat.service.MessageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.SendTo;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.util.HtmlUtils;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
-@Controller
+// TODO refactor it on WebSockets, WebSockets is better than SSE for the task
+@RestController
+@RequestMapping("message")
 public class MessageController {
 
     private Logger logger = LoggerFactory.getLogger(MessageController.class);
@@ -20,13 +17,17 @@ public class MessageController {
     @Autowired
     private MessageService messageService;
 
-    @MessageMapping("/message")
-    public void addMessage(Message message) throws Exception {
-        messageService.addMessage(message);
+    @RequestMapping(value="/", method= RequestMethod.GET)
+    public Iterable<Message> getAllMessages() {
+        logger.info("Request all messages");
+
+        return messageService.getMessages();
     }
 
-    @SendTo("/messages")
-    public Iterable<Message> getMessages() {
-        return messageService.getMessages();
+    @RequestMapping(value="/", method=RequestMethod.POST)
+    public void saveMessage(@RequestBody Message message) {
+        logger.info(String.format("Save a new message: %s", message.getText()));
+
+        messageService.saveMessage(message);
     }
 }
