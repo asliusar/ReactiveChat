@@ -24,7 +24,7 @@ const Chat = (props: ChatProps & WithStyles<any>) => {
         <div className={props.classes.container}>
             <div className={props.classes.messages}>
                 {
-                    props.messages.map((message: Message) => (
+                    props.messages && props.messages.map((message: Message) => (
                         <div>
                             {message.text}
                         </div>
