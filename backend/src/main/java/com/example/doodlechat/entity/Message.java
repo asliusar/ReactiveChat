@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Data
-@Entity
+@Entity(name = "MESSAGE")
 public class Message {
     @Id
     private Long id;

@@ -10,14 +10,14 @@ interface ChatProps {
     user: User;
     messages: Array<Message>;
     sendMessage: (message: string) => void;
-    startMessagePolling: any;
-    stopMessagePolling: any;
+    startPollMessages: any;
+    stopPollMessages: any;
 }
 
 const Chat = (props: ChatProps & WithStyles<any>) => {
     React.useEffect(() => {
-        props.startMessagePolling();
-        return props.stopMessagePolling();
+        props.startPollMessages();
+        return props.stopPollMessages();
     })
 
     return (

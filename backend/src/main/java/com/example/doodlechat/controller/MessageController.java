@@ -7,9 +7,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 // TODO refactor it on WebSockets, WebSockets is better than SSE for the task
 @RestController
-@RequestMapping("message")
+@RequestMapping("api/message")
 public class MessageController {
 
     private Logger logger = LoggerFactory.getLogger(MessageController.class);
@@ -17,14 +19,14 @@ public class MessageController {
     @Autowired
     private MessageService messageService;
 
-    @RequestMapping(value="/", method= RequestMethod.GET)
-    public Iterable<Message> getAllMessages() {
+    @RequestMapping(method= RequestMethod.GET)
+    public List<Message> getAllMessages() {
         logger.info("Request all messages");
 
         return messageService.getMessages();
     }
 
-    @RequestMapping(value="/", method=RequestMethod.POST)
+    @RequestMapping(method=RequestMethod.POST)
     public void saveMessage(@RequestBody Message message) {
         logger.info(String.format("Save a new message: %s", message.getText()));
 

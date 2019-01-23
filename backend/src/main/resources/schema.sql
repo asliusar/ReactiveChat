@@ -1,13 +1,13 @@
-CREATE TABLE USERS (
+CREATE TABLE USER (
     ID bigint auto_increment primary key,
     NAME varchar
 );
 
-CREATE TABLE MESSAGES (
+CREATE TABLE MESSAGE (
     ID bigint auto_increment primary key,
     TEXT varchar,
     DATE TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     OWNER_ID int,
     foreign key (OWNER_ID)
-    references USERS(ID)
+    references USER(ID)
 );

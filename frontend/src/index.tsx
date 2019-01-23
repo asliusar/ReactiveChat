@@ -10,17 +10,23 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 import { CUSTOM_THEME } from './theme';
 import state from './chat/redux';
 import Chat from './chat/containers';
+import createSagaMiddleware from '@redux-saga/core';
+import rootSaga from './chat/actions/saga';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);
+const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(
     state,
     composeWithDevTools(
-        applyMiddleware(middleware)
+        applyMiddleware(middleware),
+        applyMiddleware(sagaMiddleware)
     ),
     applyMiddleware(thunk)
 );
+
+sagaMiddleware.run(rootSaga);
 
 const rootEl = document.getElementById('root');
 
