@@ -1,9 +1,10 @@
 export interface Owner {
-    id: number;
+    id?: number;
     name?: String;
 }
 
 export interface Message {
+    id: number;
     text: string;
     date: Date;
     owner: Owner;

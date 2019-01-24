@@ -1,15 +1,17 @@
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import AuthBlock from './../components';
 import {loginUser} from './../actions';
+import InputBlock from './../../../components/common/InputBlock';
 
 const mapStateToProps = (state, props) => ({
+    buttonText: 'Login',
+    inputPlaceholder: 'Name'
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
     ...bindActionCreators({
-        loginUser
+        onSubmit: loginUser
     }, dispatch)
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AuthBlock);
+export default connect(mapStateToProps, mapDispatchToProps)(InputBlock);

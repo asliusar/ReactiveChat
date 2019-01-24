@@ -3,8 +3,10 @@ import { WithStyles, withStyles } from '@material-ui/core/styles';
 import {styles} from './styles';
 import { User } from '../scene/auth/state';
 import { Message } from '../state';
-import MessageInputBlock from './MessageInputBlock';
+import InputBlock from './common/InputBlock';
 import AuthBlock from './../scene/auth/containers';
+import MyMessageBlock from './messages/MyMessageBlock';
+import MessageBlock from './messages/MessageBlock';
 
 interface ChatProps {
     user: User;
@@ -14,6 +16,7 @@ interface ChatProps {
     stopPollMessages: any;
 }
 
+// TODO move the message block to a separate component
 const Chat = (props: ChatProps & WithStyles<any>) => {
     React.useEffect(() => {
         props.startPollMessages();
@@ -30,16 +33,17 @@ const Chat = (props: ChatProps & WithStyles<any>) => {
         <div className={props.classes.container}>
             <div className={props.classes.messages}>
                 {
-                    props.messages && props.messages.map((message: Message) => (
-                        <div>
-                            {message.text}
-                        </div>
-                    ))
+                    props.messages && props.messages.map((message: Message) => 
+                    props.user && message.owner.id === props.user.id 
+                        ? <MyMessageBlock {...message} key={message.id}/>
+                        : <MessageBlock {...message} key={message.id}/>
+                    )
                 }
             </div>
             {
                 props.user 
-                ? <MessageInputBlock sendMessage={sendMessage} />
+                ? <InputBlock onSubmit={sendMessage} buttonText={'Send'} 
+                    inputPlaceholder={'Message'} />
                 : <AuthBlock /> 
             }
         </div>
