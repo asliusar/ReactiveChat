@@ -20,6 +20,26 @@ export const stopPollMessages = () => {
     }
 }
 
+export const getAllMessages = () => (dispatch) => {
+    get("http://localhost:8080/api/message").
+    then((messages) => dispatch({
+            type: ACTION_TYPE.RESEIVE_MESSAGES,
+            messages
+    }))
+}
+
+export function get(endpoint) {
+    return fetch(endpoint, 
+        {
+            method: 'GET',
+            mode: 'cors'
+        }
+    )
+    .then(res => res.json())
+    .then(data => data)
+    .catch(err => console.log(err))
+}
+
 export const sendMessage = (message) => (dispatch) => {
     fetch("http://localhost:8080/api/message", {
         method: 'POST',

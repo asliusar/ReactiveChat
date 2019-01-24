@@ -14,12 +14,14 @@ interface ChatProps {
     sendMessage: (message: Message) => void;
     startPollMessages: any;
     stopPollMessages: any;
+    getAllMessages: any;
 }
 
 // TODO move the message block to a separate component
 const Chat = (props: ChatProps & WithStyles<any>) => {
     React.useEffect(() => {
         props.startPollMessages();
+
         return () => props.stopPollMessages();
     })
 

@@ -1,10 +1,10 @@
 import { all, call, delay, put, race, take } from 'redux-saga/effects';
-import { ACTION_TYPE } from '..';
+import { ACTION_TYPE, get } from '..';
 
 function* pollMessagesWorker(action) {
     while (true) {
         try {
-            yield delay(1000);
+            yield delay(2000);
             const data = yield call(get, "http://localhost:8080/api/message");
             yield put(getDataSuccessAction(data));
         } catch (err) {
@@ -37,19 +37,6 @@ const getDataFailureAction = (error) => {
         error
     }
 }
-
-function get(endpoint) {
-    return fetch(endpoint, 
-        {
-            method: 'GET',
-            mode: 'cors'
-        }
-    )
-    .then(res => res.json())
-    .then(data => data)
-    .catch(err => console.log(err))
-}
-
 
 export default function* rootSaga() {
     yield all([

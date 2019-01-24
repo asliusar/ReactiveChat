@@ -1,6 +1,6 @@
 CREATE TABLE USER (
     ID bigint auto_increment primary key,
-    NAME varchar
+    NAME varchar NOT NULL
 );
 
 CREATE TABLE MESSAGE (

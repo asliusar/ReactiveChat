@@ -20,6 +20,7 @@ export const styles: StyleRulesCallback = theme => ({
         fontWeight: 'bold',
         margin: '10px',
         flex: 0,
+        cursor: 'pointer',
         '&:focus': {
             outline: 0
         }

@@ -10,13 +10,12 @@ export const styles: StyleRulesCallback = theme => ({
     justifyContent: 'center',
     flexDirection: 'column',
     border: '1px solid #A9A9A9',
-    marginLeft: '25%',
-    marginRight: '25%',
     maxWidth: '300px',
-    maxHeight: '600px'
+    fontFamily: 'Calibri, sans-serif'
   },
   messages: {
     overflowY: 'auto',
-    width: '100%'
+    width: '100%',
+    height: '400px'
   }
 });

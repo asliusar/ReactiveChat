@@ -4,7 +4,7 @@ import MessageBlock, { MessageProps } from './MessageBlock';
 import { styles } from './styles';
 
 const MyMessageBlock = (props: MessageProps & WithStyles<any>) => (
-    <section className={props.classes.container}>
+    <section className={props.classes.myMessageContainer}>
         <MessageBlock {...props} owner={{name: "You"}} />   
     </section>
 )
