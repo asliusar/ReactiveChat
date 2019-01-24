@@ -1,6 +1,6 @@
 export interface Owner {
     id: number;
-    name: String;
+    name?: String;
 }
 
 export interface Message {

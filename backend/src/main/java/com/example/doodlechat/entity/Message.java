@@ -17,7 +17,7 @@ public class Message {
 
     private Date date;
 
-    @ManyToOne(fetch= FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name="OWNER_ID")
     private User owner;
 }

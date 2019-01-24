@@ -1,6 +1,7 @@
 import { WithStyles, withStyles } from '@material-ui/core/styles';
 import * as React from 'react';
 import { styles } from './styles';
+import { Message } from '../state';
 
 interface MessageInputBlockProps {
     sendMessage: (message: string) => void

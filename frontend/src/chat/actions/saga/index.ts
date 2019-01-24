@@ -4,9 +4,9 @@ import { ACTION_TYPE } from '..';
 function* pollMessagesWorker(action) {
     while (true) {
         try {
-            const { data } = yield call(get, "http://localhost:8080/api/message");
+            yield delay(1000);
+            const data = yield call(get, "http://localhost:8080/api/message");
             yield put(getDataSuccessAction(data));
-            yield call(delay, 5000);
         } catch (err) {
             yield put(getDataFailureAction(err));
         }
@@ -39,11 +39,17 @@ const getDataFailureAction = (error) => {
 }
 
 function get(endpoint) {
-    return fetch(endpoint, {mode: 'no-cors'})
-    .then(res => res.text())
+    return fetch(endpoint, 
+        {
+            method: 'GET',
+            mode: 'cors'
+        }
+    )
+    .then(res => res.json())
     .then(data => data)
     .catch(err => console.log(err))
-  }
+}
+
 
 export default function* rootSaga() {
     yield all([

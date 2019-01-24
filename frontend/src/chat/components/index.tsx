@@ -9,7 +9,7 @@ import AuthBlock from './../scene/auth/containers';
 interface ChatProps {
     user: User;
     messages: Array<Message>;
-    sendMessage: (message: string) => void;
+    sendMessage: (message: Message) => void;
     startPollMessages: any;
     stopPollMessages: any;
 }
@@ -17,8 +17,14 @@ interface ChatProps {
 const Chat = (props: ChatProps & WithStyles<any>) => {
     React.useEffect(() => {
         props.startPollMessages();
-        return props.stopPollMessages();
+        return () => props.stopPollMessages();
     })
+
+    let sendMessage = (text: string) => props.sendMessage({
+        text,
+        date: new Date(),
+        owner: {id: props.user.id}
+    } as Message)
 
     return (
         <div className={props.classes.container}>
@@ -33,7 +39,7 @@ const Chat = (props: ChatProps & WithStyles<any>) => {
             </div>
             {
                 props.user 
-                ? <MessageInputBlock sendMessage={props.sendMessage} />
+                ? <MessageInputBlock sendMessage={sendMessage} />
                 : <AuthBlock /> 
             }
         </div>

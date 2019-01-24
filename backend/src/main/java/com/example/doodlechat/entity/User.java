@@ -16,7 +16,4 @@ public class User {
     private Long id;
 
     private String name;
-
-    @OneToMany(mappedBy = "owner")
-    private List<Message> messageList;
 }

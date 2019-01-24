@@ -26,7 +26,7 @@ public class MessageController {
         return messageService.getMessages();
     }
 
-    @RequestMapping(method=RequestMethod.POST)
+    @RequestMapping(method=RequestMethod.POST, consumes = {"application/json"})
     public void saveMessage(@RequestBody Message message) {
         logger.info(String.format("Save a new message: %s", message.getText()));
 

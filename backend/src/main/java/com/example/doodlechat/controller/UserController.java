@@ -25,7 +25,7 @@ public class UserController {
         return userService.getUser(id);
     }
 
-    @RequestMapping(value="/", method=RequestMethod.POST, consumes = {"application/json"})
+    @RequestMapping(method=RequestMethod.POST, consumes = {"application/json"})
     public User addUser(@RequestBody User user) {
         logger.info(String.format("Create a new user with text: %s", user.getName()));
 

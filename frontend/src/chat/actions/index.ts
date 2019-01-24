@@ -20,8 +20,20 @@ export const stopPollMessages = () => {
     }
 }
 
-export const sendMessage = () => {
-    return {
-        type: ACTION_TYPE.SEND_USER_MESSAGE
-    };
+export const sendMessage = (message) => (dispatch) => {
+    fetch("http://localhost:8080/api/message", {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(message)
+    })
+    .then(res => {
+        dispatch(() => ({
+            type: ACTION_TYPE.SEND_USER_MESSAGE
+        }))
+    })
+    .catch(err => console.log(err));
 };
