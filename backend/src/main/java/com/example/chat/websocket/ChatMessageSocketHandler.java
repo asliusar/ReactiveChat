@@ -1,14 +1,12 @@
-package com.example.doodlechat.websocket;
+package com.example.chat.websocket;
 
-import com.example.doodlechat.entity.Message;
-import com.example.doodlechat.service.MessageService;
+import com.example.chat.entity.Message;
+import com.example.chat.service.MessageService;
 import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
@@ -30,12 +28,13 @@ public class ChatMessageSocketHandler extends TextWebSocketHandler {
     public void handleTextMessage(WebSocketSession session, TextMessage textMessage)
             throws InterruptedException, IOException {
 
+        Message message = new Gson().fromJson(textMessage.getPayload(), Message.class);
+        messageService.saveMessage(message);
+
         for (WebSocketSession webSocketSession : sessions) {
-            Message message = new Gson().fromJson(textMessage.getPayload(), Message.class);
-
-            messageService.saveMessage(message);
-
-            webSocketSession.sendMessage(allMessagesToJson());
+            if (webSocketSession.isOpen()) {
+                webSocketSession.sendMessage(allMessagesToJson());
+            }
         }
     }
 

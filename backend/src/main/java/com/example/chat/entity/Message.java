@@ -1,4 +1,4 @@
-package com.example.doodlechat.entity;
+package com.example.chat.entity;
 
 import lombok.Data;
 

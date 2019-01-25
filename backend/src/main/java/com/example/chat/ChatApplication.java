@@ -1,4 +1,4 @@
-package com.example.doodlechat;
+package com.example.chat;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 @EnableAutoConfiguration
-public class DoodleChatApplication {
+public class ChatApplication {
 
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
@@ -22,7 +22,7 @@ public class DoodleChatApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(DoodleChatApplication.class, args);
+		SpringApplication.run(ChatApplication.class, args);
 	}
 
 }

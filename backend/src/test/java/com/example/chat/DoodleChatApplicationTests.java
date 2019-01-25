@@ -1,4 +1,4 @@
-package com.example.doodlechat;
+package com.example.chat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,8 +1,7 @@
-package com.example.doodlechat.repository;
+package com.example.chat.repository;
 
-import com.example.doodlechat.entity.User;
+import com.example.chat.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository

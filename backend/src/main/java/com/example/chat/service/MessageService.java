@@ -1,7 +1,7 @@
-package com.example.doodlechat.service;
+package com.example.chat.service;
 
-import com.example.doodlechat.entity.Message;
-import com.example.doodlechat.repository.MessageRepository;
+import com.example.chat.entity.Message;
+import com.example.chat.repository.MessageRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

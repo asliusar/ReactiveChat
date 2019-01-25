@@ -1,16 +1,11 @@
-package com.example.doodlechat.service;
+package com.example.chat.service;
 
-import com.example.doodlechat.controller.MessageController;
-import com.example.doodlechat.entity.Message;
-import com.example.doodlechat.entity.User;
-import com.example.doodlechat.repository.MessageRepository;
-import com.example.doodlechat.repository.UserRepository;
+import com.example.chat.entity.User;
+import com.example.chat.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class UserService {
