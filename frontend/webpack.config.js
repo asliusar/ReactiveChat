@@ -73,11 +73,7 @@ const config = {
         new HtmlWebpackPlugin({
             chunksSortMode: 'dependency',
             template: path.resolve(FRONTEND_DIR, 'index.html')
-        }),
-        new CopyWebpackPlugin([{
-            from: path.resolve(FRONTEND_DIR, 'public'),
-            to: path.resolve(__dirname, "dist/public"),
-        }])
+        })
     ],
     node: {
         fs: 'empty'
