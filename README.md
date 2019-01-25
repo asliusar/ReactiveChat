@@ -5,6 +5,8 @@ There are two branches:
 2) "polling" - the implementation with polling + redux-saga
 
 ## FrontEnd
+
+Url http://localhost:4000
 ```cd frontend
 npm i
 npm run dev
@@ -12,6 +14,7 @@ npm run dev
 
 ## BackEnd
 
+Url http://localhost:8080
 ```
 cd backend
 mvn clean install
