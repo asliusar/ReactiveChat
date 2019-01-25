@@ -1,4 +1,4 @@
-import { call, put, race, delay, take } from 'redux-saga/effects';
+let ws: WebSocket;
 
 export enum ACTION_TYPE {
     SEND_USER_MESSAGE = 'SEND_USER_MESSAGE',
@@ -8,15 +8,18 @@ export enum ACTION_TYPE {
     POLL_STOP = 'POLL_STOP'
 }
 
-export const startPollMessages = () => {
-    return {
-        type: ACTION_TYPE.POLL_START
+export const subscribeOnMessages = () => (dispatch) => {
+    if (ws != null) {
+        return {type: ACTION_TYPE.POLL_START};
     }
-}
 
-export const stopPollMessages = () => {
-    return {
-        type: ACTION_TYPE.POLL_STOP
+    ws = new WebSocket('ws://localhost:8080/chat');
+
+    ws.onmessage = (message) => {
+        dispatch({
+            type: ACTION_TYPE.RESEIVE_MESSAGES,
+            messages: JSON.parse(message.data)
+        })
     }
 }
 
@@ -41,19 +44,5 @@ export function get(endpoint) {
 }
 
 export const sendMessage = (message) => (dispatch) => {
-    fetch("http://localhost:8080/api/message", {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(message)
-    })
-    .then(res => {
-        dispatch(() => ({
-            type: ACTION_TYPE.SEND_USER_MESSAGE
-        }))
-    })
-    .catch(err => console.log(err));
+    ws.send(JSON.stringify(message));
 };

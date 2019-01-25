@@ -12,18 +12,15 @@ interface ChatProps {
     user: User;
     messages: Array<Message>;
     sendMessage: (message: Message) => void;
-    startPollMessages: any;
-    stopPollMessages: any;
+    subscribeOnMessages: any;
     getAllMessages: any;
 }
 
 // TODO move the message block to a separate component
 const Chat = (props: ChatProps & WithStyles<any>) => {
     React.useEffect(() => {
-        props.startPollMessages();
-
-        return () => props.stopPollMessages();
-    })
+        props.subscribeOnMessages();
+    }, [props.user])
 
     let sendMessage = (text: string) => props.sendMessage({
         text,

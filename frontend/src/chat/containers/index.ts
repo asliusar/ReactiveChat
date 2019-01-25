@@ -2,7 +2,7 @@ import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 
 import Chat from './../components';
-import {sendMessage, startPollMessages, stopPollMessages, getAllMessages} from './../actions';
+import {sendMessage, subscribeOnMessages, getAllMessages} from './../actions';
 import { UserState } from '../scene/auth/state';
 import ChatState from '../state';
 
@@ -14,8 +14,7 @@ const mapStateToProps = (state, props) => ({
 const mapDispatchToProps = (dispatch: Dispatch) => ({
     ...bindActionCreators({
         sendMessage,
-        startPollMessages,
-        stopPollMessages,
+        subscribeOnMessages,
         getAllMessages
     }, dispatch)
 });

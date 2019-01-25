@@ -1,6 +1,5 @@
 package com.example.doodlechat.service;
 
-import com.example.doodlechat.controller.MessageController;
 import com.example.doodlechat.entity.Message;
 import com.example.doodlechat.repository.MessageRepository;
 import org.slf4j.Logger;

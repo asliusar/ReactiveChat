@@ -40,6 +40,6 @@ const getDataFailureAction = (error) => {
 
 export default function* rootSaga() {
     yield all([
-        pollMessagesWatcher()
+        // pollMessagesWatcher()
     ])
 }
