@@ -2,7 +2,7 @@
 
 There are two branches:
 1) "master" - the implementation with websockets
-2) "polling" - the implementation with polling
+2) "polling" - the implementation with polling + redux-saga
 
 ## FrontEnd
 ```cd frontend
@@ -15,7 +15,7 @@ npm run dev
 ```
 cd backend
 mvn clean install
-java -jar
+java -jar target/chat-0.0.1-SNAPSHOT.jar
 ```
 
 ## DB
