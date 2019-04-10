@@ -1,42 +1,21 @@
 import * as React from 'react';
 import { WithStyles, withStyles } from '@material-ui/core/styles';
 import { styles } from './styles/index';
-import { User } from '../scene/auth/state';
-import { Message } from '../state';
-import InputBlock from './common/InputBlock';
+import Chat from './../scene/chat/containers';
 import AuthBlock from './../scene/auth/containers';
-import MessageList from './messages';
+import { User } from '../scene/auth/state';
 
-export interface ChatProps {
+export interface RootProps {
     user: User;
-    messages: Array<Message>;
-    sendMessage: (message: Message) => void;
-    subscribeOnMessages: any;
-    getAllMessages: any;
 }
 
-export const Chat = (props: ChatProps & WithStyles<any>) => {
-    React.useEffect(() => {
-        props.subscribeOnMessages();
-    }, [props.user])
-
-    let sendMessage = (text: string) => props.sendMessage({
-        text,
-        date: new Date(),
-        owner: { id: props.user.id }
-    } as Message)
-
+export const Root = (props: RootProps & WithStyles<any>) => {
     return (
         <div className={props.classes.container}>
-            <MessageList user={props.user} messages={props.messages}/>
-            {
-                props.user
-                    ? <InputBlock onSubmit={sendMessage} buttonText={'Send'}
-                        inputPlaceholder={'Message'} />
-                    : <AuthBlock />
-            }
+            <Chat user={props.user} />
+            <AuthBlock />
         </div>
     )
 };
 
-export default withStyles(styles)(Chat);
+export default withStyles(styles)(Root);
