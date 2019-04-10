@@ -7,7 +7,7 @@ import InputBlock from './common/InputBlock';
 import AuthBlock from './../scene/auth/containers';
 import MessageList from './messages';
 
-interface ChatProps {
+export interface ChatProps {
     user: User;
     messages: Array<Message>;
     sendMessage: (message: Message) => void;

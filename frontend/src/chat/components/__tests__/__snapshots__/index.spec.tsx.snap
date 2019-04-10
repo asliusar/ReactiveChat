@@ -2,12 +2,14 @@
 
 exports[`Chat component check the input form is enabled 1`] = `
 <div>
-  <div />
   <div
-    className="InputBlock-block-1"
+    className="MessageList-messages-2"
+  />
+  <div
+    className="InputBlock-block-7"
   >
     <input
-      className="InputBlock-input-3"
+      className="InputBlock-input-9"
       name="text"
       onChange={[Function]}
       onKeyPress={[Function]}
@@ -16,7 +18,7 @@ exports[`Chat component check the input form is enabled 1`] = `
       value=""
     />
     <button
-      className="InputBlock-button-2"
+      className="InputBlock-button-8"
       onClick={[Function]}
     >
       Send
@@ -27,12 +29,14 @@ exports[`Chat component check the input form is enabled 1`] = `
 
 exports[`Chat component check the login is enabled 1`] = `
 <div>
-  <div />
   <div
-    className="InputBlock-block-1"
+    className="MessageList-messages-2"
+  />
+  <div
+    className="InputBlock-block-7"
   >
     <input
-      className="InputBlock-input-3"
+      className="InputBlock-input-9"
       name="text"
       onChange={[Function]}
       onKeyPress={[Function]}
@@ -41,7 +45,7 @@ exports[`Chat component check the login is enabled 1`] = `
       value=""
     />
     <button
-      className="InputBlock-button-2"
+      className="InputBlock-button-8"
       onClick={[Function]}
     >
       Login

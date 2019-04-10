@@ -6,7 +6,7 @@ import MyMessageBlock from './MyMessageBlock';
 import MessageBlock from './MessageBlock';
 import { User } from 'src/chat/scene/auth/state';
 
-interface MessageListProps {
+export interface MessageListProps {
     user: User;
     messages: Array<Message>;
 }

@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Reactive chat" tests="2" failures="0" time="5.108">
-  <testsuite name="Chat component" errors="0" failures="0" skipped="0" timestamp="2019-04-10T17:18:29" time="3.88" tests="2">
-    <testcase classname="Chat component check the login is enabled" name="Chat component check the login is enabled" time="0.046">
+<testsuites name="Reactive chat" tests="4" failures="0" time="5.995">
+  <testsuite name="MessageList component" errors="0" failures="0" skipped="0" timestamp="2019-04-10T17:53:31" time="3.976" tests="2">
+    <testcase classname="MessageList component draw my message" name="MessageList component draw my message" time="0.043">
+    </testcase>
+    <testcase classname="MessageList component draw chat message" name="MessageList component draw chat message" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Chat component" errors="0" failures="0" skipped="0" timestamp="2019-04-10T17:53:31" time="4.133" tests="2">
+    <testcase classname="Chat component check the login is enabled" name="Chat component check the login is enabled" time="0.051">
     </testcase>
     <testcase classname="Chat component check the input form is enabled" name="Chat component check the input form is enabled" time="0.003">
     </testcase>

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageList component draw chat message 1`] = `
+<div>
+  <section
+    className="MessageBlock-container-7"
+  >
+    <div
+      className="MessageBlock-userNameLabel-10"
+    >
+      Name2
+    </div>
+    <div
+      className="MessageBlock-textLabel-11"
+    >
+      text1
+    </div>
+    <div
+      className="MessageBlock-dateLabel-12"
+    >
+      Apr 10, 2019, 19:53
+    </div>
+  </section>
+</div>
+`;
+
+exports[`MessageList component draw my message 1`] = `
+<div>
+  <section
+    className="MyMessageBlock-myMessageContainer-3"
+  >
+    <section
+      className="MessageBlock-container-7 MyMessageBlock-container-1"
+    >
+      <div
+        className="MessageBlock-userNameLabel-10 MyMessageBlock-userNameLabel-4"
+      >
+        You
+      </div>
+      <div
+        className="MessageBlock-textLabel-11 MyMessageBlock-textLabel-5"
+      >
+        text1
+      </div>
+      <div
+        className="MessageBlock-dateLabel-12 MyMessageBlock-dateLabel-6"
+      >
+        Apr 10, 2019, 19:53
+      </div>
+    </section>
+  </section>
+</div>
+`;
