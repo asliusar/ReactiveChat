@@ -13,7 +13,9 @@ export const Root = (props: RootProps & WithStyles<any>) => {
     return (
         <div className={props.classes.container}>
             <Chat user={props.user} />
-            <AuthBlock />
+            {
+                props.user == null && <AuthBlock /> 
+            }
         </div>
     )
 };

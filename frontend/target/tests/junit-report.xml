@@ -1,15 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Reactive chat" tests="4" failures="0" time="5.995">
-  <testsuite name="MessageList component" errors="0" failures="0" skipped="0" timestamp="2019-04-10T17:53:31" time="3.976" tests="2">
-    <testcase classname="MessageList component draw my message" name="MessageList component draw my message" time="0.043">
+<testsuites name="Reactive chat" tests="4" failures="4" time="5.08">
+  <testsuite name="MessageList component" errors="0" failures="2" skipped="0" timestamp="2019-04-10T18:30:51" time="3.154" tests="2">
+    <testcase classname="MessageList component draw my message" name="MessageList component draw my message" time="0.042">
+      <failure>Error: expect(received).toMatchSnapshot()
+
+Snapshot name: `MessageList component draw my message 1`
+
+- Snapshot
++ Received
+
+@@ -16,10 +16,10 @@
+          text1
+        &lt;/div&gt;
+        &lt;div
+          className=&quot;MessageBlock-dateLabel-12 MyMessageBlock-dateLabel-6&quot;
+        &gt;
+-         Apr 10, 2019, 19:53
++         Apr 10, 2019, 20:30
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+    at Object.toMatchSnapshot (C:\Users\slian01\Projects\ReactiveChat\frontend\src\root\scene\chat\components\messages\__tests__\index.spec.tsx:30:21)
+    at Object.asyncJestTest (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:102:37)
+    at resolve (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:26:19)
+    at promise.then (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
-    <testcase classname="MessageList component draw chat message" name="MessageList component draw chat message" time="0.002">
+    <testcase classname="MessageList component draw a chat message" name="MessageList component draw a chat message" time="0.002">
+      <failure>Error: expect(received).toMatchSnapshot()
+
+Snapshot name: `MessageList component draw a chat message 1`
+
+- Snapshot
++ Received
+
+@@ -13,9 +13,9 @@
+        text1
+      &lt;/div&gt;
+      &lt;div
+        className=&quot;MessageBlock-dateLabel-12&quot;
+      &gt;
+-       Apr 10, 2019, 20:29
++       Apr 10, 2019, 20:30
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+    at Object.toMatchSnapshot (C:\Users\slian01\Projects\ReactiveChat\frontend\src\root\scene\chat\components\messages\__tests__\index.spec.tsx:47:21)
+    at Object.asyncJestTest (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:102:37)
+    at resolve (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:26:19)
+    at promise.then (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
   </testsuite>
-  <testsuite name="Chat component" errors="0" failures="0" skipped="0" timestamp="2019-04-10T17:53:31" time="4.133" tests="2">
-    <testcase classname="Chat component check the login is enabled" name="Chat component check the login is enabled" time="0.051">
+  <testsuite name="Chat component" errors="0" failures="2" skipped="0" timestamp="2019-04-10T18:30:51" time="3.251" tests="2">
+    <testcase classname="Chat component check the login is enabled" name="Chat component check the login is enabled" time="0.048">
+      <failure>Error: expect(received).toMatchSnapshot()
+
+Snapshot name: `Chat component check the login is enabled 1`
+
+- Snapshot
++ Received
+
+- &lt;div&gt;
+-   &lt;div
+-     className=&quot;MessageList-messages-2&quot;
+-   /&gt;
+-   &lt;div
+-     className=&quot;InputBlock-block-7&quot;
+-   &gt;
+-     &lt;input
+-       className=&quot;InputBlock-input-9&quot;
+-       name=&quot;text&quot;
+-       onChange={[Function]}
+-       onKeyPress={[Function]}
+-       placeholder=&quot;Name&quot;
+-       type=&quot;text&quot;
+-       value=&quot;&quot;
+-     /&gt;
+-     &lt;button
+-       className=&quot;InputBlock-button-8&quot;
+-       onClick={[Function]}
+-     &gt;
+-       Login
+-     &lt;/button&gt;
+-   &lt;/div&gt;
+- &lt;/div&gt;
++ &lt;div
++   className=&quot;MessageList-messages-2&quot;
++ /&gt;
+    at Object.toMatchSnapshot (C:\Users\slian01\Projects\ReactiveChat\frontend\src\root\scene\chat\components\__tests__\index.spec.tsx:30:21)
+    at Object.asyncJestTest (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:102:37)
+    at resolve (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:26:19)
+    at promise.then (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
-    <testcase classname="Chat component check the input form is enabled" name="Chat component check the input form is enabled" time="0.003">
+    <testcase classname="Chat component check the input form is enabled" name="Chat component check the input form is enabled" time="0.01">
+      <failure>Error: expect(received).toMatchSnapshot()
+
+Snapshot name: `Chat component check the input form is enabled 1`
+
+- Snapshot
++ Received
+
+@@ -1,9 +1,9 @@
+- &lt;div&gt;
++ Array [
+    &lt;div
+      className=&quot;MessageList-messages-2&quot;
+-   /&gt;
++   /&gt;,
+    &lt;div
+      className=&quot;InputBlock-block-7&quot;
+    &gt;
+      &lt;input
+        className=&quot;InputBlock-input-9&quot;
+@@ -18,7 +18,7 @@
+        className=&quot;InputBlock-button-8&quot;
+        onClick={[Function]}
+      &gt;
+        Send
+      &lt;/button&gt;
+-   &lt;/div&gt;
+- &lt;/div&gt;
++   &lt;/div&gt;,
++ ]
+    at Object.toMatchSnapshot (C:\Users\slian01\Projects\ReactiveChat\frontend\src\root\scene\chat\components\__tests__\index.spec.tsx:40:21)
+    at Object.asyncJestTest (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:102:37)
+    at resolve (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:43:12)
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:26:19)
+    at promise.then (C:\Users\slian01\Projects\ReactiveChat\frontend\node_modules\jest-jasmine2\build\queueRunner.js:73:41)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
     </testcase>
   </testsuite>
 </testsuites>
