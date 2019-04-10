@@ -25,8 +25,8 @@ const InputBlock = (props: InputBlockProps & WithStyles<any>) => {
 
     return (
         <div className={props.classes.block}>
-            <input type='text' name='text' className={props.classes.input} 
-                value={text} placeholder={props.inputPlaceholder} 
+            <input type='text' name='text' className={props.classes.input}
+                value={text} placeholder={props.inputPlaceholder}
                 onChange={(event) => setText(event.target.value)}
                 onKeyPress={handleKeyPress}
             />
@@ -34,7 +34,7 @@ const InputBlock = (props: InputBlockProps & WithStyles<any>) => {
                 {props.buttonText}
             </button>
         </div>
-    ) 
+    )
 };
 
 export default withStyles(styles)(InputBlock);

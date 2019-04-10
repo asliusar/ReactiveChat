@@ -15,15 +15,15 @@ const MessageBlock = (props: MessageProps & WithStyles<any>) => (
         <div className={props.classes.textLabel}>{props.text}</div>
         <div className={props.classes.dateLabel}>{
             new Date(props.date).toLocaleDateString('en-GB', {
-                day: 'numeric', 
-                month: 'short', 
-                year: 'numeric', 
+                day: 'numeric',
+                month: 'short',
+                year: 'numeric',
                 hour: 'numeric',
                 minute: 'numeric',
                 hour12: false
-              })
+            })
         }</div>
     </section>
 )
-  
+
 export default withStyles(styles)(MessageBlock);

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1554916489666" clover="3.2.0">
+  <project timestamp="1554916489667" name="All files">
+    <metrics statements="31" coveredstatements="18" conditionals="10" coveredconditionals="4" methods="21" coveredmethods="6" elements="62" coveredelements="28" complexity="0" loc="31" ncloc="31" packages="8" files="9" classes="9"/>
+    <package name="components">
+      <metrics statements="6" coveredstatements="5" conditionals="8" coveredconditionals="4" methods="4" coveredmethods="2"/>
+      <file name="index.tsx" path="C:\Users\slian01\Projects\ReactiveChat\frontend\src\chat\components\index.tsx">
+        <metrics statements="6" coveredstatements="5" conditionals="8" coveredconditionals="4" methods="4" coveredmethods="2"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="4"/>
+      </file>
+    </package>
+    <package name="components.common">
+      <metrics statements="11" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="1"/>
+      <file name="InputBlock.tsx" path="C:\Users\slian01\Projects\ReactiveChat\frontend\src\chat\components\common\InputBlock.tsx">
+        <metrics statements="11" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.common.styles">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.ts" path="C:\Users\slian01\Projects\ReactiveChat\frontend\src\chat\components\common\styles\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.messages">
+      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="MessageBlock.tsx" path="C:\Users\slian01\Projects\ReactiveChat\frontend\src\chat\components\messages\MessageBlock.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="MyMessageBlock.tsx" path="C:\Users\slian01\Projects\ReactiveChat\frontend\src\chat\components\messages\MyMessageBlock.tsx">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.messages.styles">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.ts" path="C:\Users\slian01\Projects\ReactiveChat\frontend\src\chat\components\messages\styles\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.styles">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.ts" path="C:\Users\slian01\Projects\ReactiveChat\frontend\src\chat\components\styles\index.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="scene.auth.actions">
+      <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="index.ts" path="C:\Users\slian01\Projects\ReactiveChat\frontend\src\chat\scene\auth\actions\index.ts">
+        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="scene.auth.containers">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="index.ts" path="C:\Users\slian01\Projects\ReactiveChat\frontend\src\chat\scene\auth\containers\index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

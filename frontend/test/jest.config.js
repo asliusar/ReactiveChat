@@ -1,6 +1,6 @@
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
-const {defaults} = require('jest-config');
+const { defaults } = require('jest-config');
 module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -65,9 +65,9 @@ module.exports = {
 
   // An array of file extensions your modules use
   moduleFileExtensions: [
-    'es6',
-    'jsx',
-    'js'
+    'js',
+    'ts',
+    'tsx'
   ],
 
   // A map from regular expressions to module names that allow to stub out resources with a single module
@@ -97,7 +97,7 @@ module.exports = {
       suiteName: 'Reactive chat'
     }]
   ],
-
+  preset: 'ts-jest',
   // Automatically reset mock state between every test
   // resetMocks: false,
 
@@ -140,7 +140,7 @@ module.exports = {
   testLocationInResults: true,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ['<rootDir>/**/*.spec.(js|jsx)'],
+  testMatch: ['<rootDir>/**/*.spec.(js|ts|tsx)'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
@@ -164,7 +164,7 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    "^.+\\.(jsx|js)$": "<rootDir>/node_modules/babel-jest"
+    "^.+\\.(js|tsx|ts)$": "<rootDir>/node_modules/babel-jest"
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
