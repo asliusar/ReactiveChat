@@ -12,10 +12,5 @@ export const styles: StyleRulesCallback = theme => ({
     border: '1px solid #A9A9A9',
     maxWidth: '300px',
     fontFamily: 'Calibri, sans-serif'
-  },
-  messages: {
-    overflowY: 'auto',
-    width: '100%',
-    height: '400px'
   }
 });

@@ -4,6 +4,11 @@ export const styles: StyleRulesCallback = theme => ({
   container: {
     margin: '10px',
   },
+  messages: {
+    overflowY: 'auto',
+    width: '100%',
+    height: '400px'
+  },
   myMessageContainer: {
     border: '1px solid #A9A9A9',
     margin: '10px',

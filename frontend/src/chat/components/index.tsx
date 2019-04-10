@@ -5,8 +5,7 @@ import { User } from '../scene/auth/state';
 import { Message } from '../state';
 import InputBlock from './common/InputBlock';
 import AuthBlock from './../scene/auth/containers';
-import MyMessageBlock from './messages/MyMessageBlock';
-import MessageBlock from './messages/MessageBlock';
+import MessageList from './messages';
 
 interface ChatProps {
     user: User;
@@ -16,7 +15,6 @@ interface ChatProps {
     getAllMessages: any;
 }
 
-// TODO move the message block to a separate component
 export const Chat = (props: ChatProps & WithStyles<any>) => {
     React.useEffect(() => {
         props.subscribeOnMessages();
@@ -30,15 +28,7 @@ export const Chat = (props: ChatProps & WithStyles<any>) => {
 
     return (
         <div className={props.classes.container}>
-            <div className={props.classes.messages}>
-                {
-                    props.messages && props.messages.map((message: Message) =>
-                        props.user && message.owner.id === props.user.id
-                            ? <MyMessageBlock {...message} key={message.id} />
-                            : <MessageBlock {...message} key={message.id} />
-                    )
-                }
-            </div>
+            <MessageList user={props.user} messages={props.messages}/>
             {
                 props.user
                     ? <InputBlock onSubmit={sendMessage} buttonText={'Send'}

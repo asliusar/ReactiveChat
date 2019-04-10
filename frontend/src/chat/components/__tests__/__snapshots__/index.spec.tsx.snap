@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Chat component check the login menu, where user = [object Object] 1`] = `
+exports[`Chat component check the input form is enabled 1`] = `
 <div>
   <div />
   <div
@@ -25,7 +25,7 @@ exports[`Chat component check the login menu, where user = [object Object] 1`] =
 </div>
 `;
 
-exports[`Chat component check the login menu, where user = undefined 1`] = `
+exports[`Chat component check the login is enabled 1`] = `
 <div>
   <div />
   <div

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Reactive chat" tests="2" failures="0" time="4.907">
-  <testsuite name="Chat component" errors="0" failures="0" skipped="0" timestamp="2019-04-10T17:14:45" time="3.656" tests="2">
-    <testcase classname="Chat component check the login menu, where user = [object Object]" name="Chat component check the login menu, where user = [object Object]" time="0.038">
+<testsuites name="Reactive chat" tests="2" failures="0" time="5.108">
+  <testsuite name="Chat component" errors="0" failures="0" skipped="0" timestamp="2019-04-10T17:18:29" time="3.88" tests="2">
+    <testcase classname="Chat component check the login is enabled" name="Chat component check the login is enabled" time="0.046">
     </testcase>
-    <testcase classname="Chat component check the login menu, where user = undefined" name="Chat component check the login menu, where user = undefined" time="0.005">
+    <testcase classname="Chat component check the input form is enabled" name="Chat component check the input form is enabled" time="0.003">
     </testcase>
   </testsuite>
 </testsuites>
