@@ -1,7 +1,7 @@
 # ReactiveChat
 
 There are two branches:
-1) "master" - the implementation with websockets
+1) "master" - the implementation with websockets, pure modules structure and Jest tests
 2) "polling" - the implementation with polling + redux-saga
 
 ## FrontEnd
