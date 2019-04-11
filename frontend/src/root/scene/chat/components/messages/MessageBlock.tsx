@@ -1,6 +1,6 @@
 import { WithStyles, withStyles } from '@material-ui/core/styles';
 import * as React from 'react';
-import { Owner } from 'src/chat/state';
+import { Owner } from 'src/root/scene/chat/state';
 import { styles } from './styles';
 
 export interface MessageProps {

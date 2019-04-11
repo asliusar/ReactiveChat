@@ -8,8 +8,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import { CUSTOM_THEME } from './theme';
-import state from './chat/redux';
-import Chat from './chat/containers';
+import state from './root/redux';
+import Chat from './root/containers';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);

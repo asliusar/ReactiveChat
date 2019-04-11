@@ -4,7 +4,7 @@ import { styles } from './styles/index';
 import { Message } from './../../state';
 import MyMessageBlock from './MyMessageBlock';
 import MessageBlock from './MessageBlock';
-import { User } from 'src/chat/scene/auth/state';
+import { User } from 'src/root/scene/auth/state';
 
 export interface MessageListProps {
     user: User;

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import { Chat, ChatProps } from './../index';
+import Chat, { ChatProps } from './../index';
 import configureStore from 'redux-mock-store';
-import { User } from 'src/chat/scene/auth/state';
+import { User } from 'src/root/scene/auth/state';
 import renderer from 'react-test-renderer';
 
 let props = {} as ChatProps;
@@ -14,8 +14,7 @@ beforeEach(() => {
     messages: [],
     sendMessage: jest.fn(),
     subscribeOnMessages: jest.fn(),
-    getAllMessages: jest.fn(),
-    classes: {} 
+    getAllMessages: jest.fn()
   } as ChatProps;
 });
 
@@ -24,7 +23,7 @@ describe('Chat component', () => {
     props.user = null;
 
     const wrapper = renderer.create(
-      <Provider store={mockStore({})}><Chat {...props} /></Provider>
+      <Provider store={mockStore({})}><Chat {...props} classes={{}}/></Provider>
     ).toJSON();
 
     expect(wrapper).toMatchSnapshot();
@@ -34,7 +33,7 @@ describe('Chat component', () => {
     props.user = {} as User;
 
     const wrapper = renderer.create(
-      <Provider store={mockStore({})}><Chat {...props} /></Provider>
+      <Provider store={mockStore({})}><Chat {...props} classes={{}}/></Provider>
     ).toJSON();
 
     expect(wrapper).toMatchSnapshot();

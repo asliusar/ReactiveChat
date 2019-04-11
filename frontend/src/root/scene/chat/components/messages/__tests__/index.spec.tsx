@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { MessageList, MessageListProps } from './../index';
-import { User } from 'src/chat/scene/auth/state';
+import { User } from 'src/root/scene/auth/state';
 import renderer from 'react-test-renderer';
-import { Message, Owner } from 'src/chat/state';
+import { Message, Owner } from 'src/root/scene/chat/state';
 
 let props = {} as MessageListProps;
 
@@ -25,7 +25,7 @@ describe('MessageList component', () => {
       } as Message
     ]
 
-    const wrapper = renderer.create(<MessageList {...props} />).toJSON();
+    const wrapper = renderer.create(<MessageList {...props} classes={{}}/>).toJSON();
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -42,7 +42,7 @@ describe('MessageList component', () => {
       } as Message
     ]
 
-    const wrapper = renderer.create(<MessageList {...props} />).toJSON();
+    const wrapper = renderer.create(<MessageList {...props} classes={{}}/>).toJSON();
 
     expect(wrapper).toMatchSnapshot();
   });

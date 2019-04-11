@@ -14,7 +14,7 @@ export interface ChatProps {
     getAllMessages: any;
 }
 
-export const Chat = (props: ChatProps & WithStyles<any>) => {
+const Chat = (props: ChatProps & WithStyles<any>) => {
     React.useEffect(() => {
         props.subscribeOnMessages();
     }, [props.user])
