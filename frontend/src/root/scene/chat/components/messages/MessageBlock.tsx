@@ -9,21 +9,23 @@ export interface MessageProps {
     owner: Owner;
 }
 
-const MessageBlock = (props: MessageProps & WithStyles<any>) => (
-    <section className={props.classes.container}>
-        <div className={props.classes.userNameLabel}>{props.owner.name}</div>
-        <div className={props.classes.textLabel}>{props.text}</div>
-        <div className={props.classes.dateLabel}>{
-            new Date(props.date).toLocaleDateString('en-GB', {
-                day: 'numeric',
-                month: 'short',
-                year: 'numeric',
-                hour: 'numeric',
-                minute: 'numeric',
-                hour12: false
-            })
-        }</div>
-    </section>
-)
+const MessageBlock = (props: MessageProps & WithStyles<any>) => {
+    const date = new Date(props.date).toLocaleDateString('en-GB', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: false
+    })
+
+    return (
+        <section className={props.classes.container}>
+            <div className={props.classes.userNameLabel}>{props.owner.name}</div>
+            <div className={props.classes.textLabel}>{props.text}</div>
+            <div className={props.classes.dateLabel}>{date}</div>
+        </section>
+    )
+}
 
 export default withStyles(styles)(MessageBlock);

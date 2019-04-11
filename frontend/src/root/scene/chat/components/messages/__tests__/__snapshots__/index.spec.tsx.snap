@@ -18,7 +18,7 @@ exports[`MessageList component draw a chat message 1`] = `
     <div
       className="MessageBlock-dateLabel-12"
     >
-      Apr 11, 2019, 11:37
+      Feb 1, 2019, 00:00
     </div>
   </section>
 </div>
@@ -45,7 +45,7 @@ exports[`MessageList component draw my message 1`] = `
       <div
         className="MessageBlock-dateLabel-12 MyMessageBlock-dateLabel-6"
       >
-        Apr 11, 2019, 11:37
+        Feb 1, 2019, 00:00
       </div>
     </section>
   </section>

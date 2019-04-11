@@ -20,7 +20,7 @@ describe('MessageList component', () => {
       {
         id: 1,
         text: "text1",
-        date: new Date(),
+        date: new Date(2019, 1, 1),
         owner: props.user
       } as Message
     ]
@@ -35,7 +35,7 @@ describe('MessageList component', () => {
       {
         id: 1,
         text: "text1",
-        date: new Date(),
+        date: new Date(2019, 1, 1),
         owner: {
           id: 321, name: "Name2"
         } as Owner

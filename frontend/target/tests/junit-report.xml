@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Reactive chat" tests="4" failures="0" time="4.668">
-  <testsuite name="MessageList component" errors="0" failures="0" skipped="0" timestamp="2019-04-11T09:37:28" time="2.913" tests="2">
-    <testcase classname="MessageList component draw my message" name="MessageList component draw my message" time="0.036">
+<testsuites name="Reactive chat" tests="4" failures="0" time="4.605">
+  <testsuite name="MessageList component" errors="0" failures="0" skipped="0" timestamp="2019-04-11T09:50:50" time="2.883" tests="2">
+    <testcase classname="MessageList component draw my message" name="MessageList component draw my message" time="0.035">
     </testcase>
-    <testcase classname="MessageList component draw a chat message" name="MessageList component draw a chat message" time="0.003">
+    <testcase classname="MessageList component draw a chat message" name="MessageList component draw a chat message" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="Chat component" errors="0" failures="0" skipped="0" timestamp="2019-04-11T09:37:28" time="3.003" tests="2">
+  <testsuite name="Chat component" errors="0" failures="0" skipped="0" timestamp="2019-04-11T09:50:50" time="2.936" tests="2">
     <testcase classname="Chat component check the login is enabled" name="Chat component check the login is enabled" time="0.037">
     </testcase>
-    <testcase classname="Chat component check the input form is enabled" name="Chat component check the input form is enabled" time="0.007">
+    <testcase classname="Chat component check the input form is enabled" name="Chat component check the input form is enabled" time="0.006">
     </testcase>
   </testsuite>
 </testsuites>
