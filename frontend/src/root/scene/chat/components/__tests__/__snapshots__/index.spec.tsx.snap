@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chat component check the input form is enabled 1`] = `
-<div>
+Array [
   <div
-    className="MessageList-messages-2"
-  />
+    className="MessageList-messages-3"
+  />,
   <div
-    className="InputBlock-block-7"
+    className="InputBlock-block-8"
   >
     <input
-      className="InputBlock-input-9"
+      className="InputBlock-input-10"
       name="text"
       onChange={[Function]}
       onKeyPress={[Function]}
@@ -18,38 +18,17 @@ exports[`Chat component check the input form is enabled 1`] = `
       value=""
     />
     <button
-      className="InputBlock-button-8"
+      className="InputBlock-button-9"
       onClick={[Function]}
     >
       Send
     </button>
-  </div>
-</div>
+  </div>,
+]
 `;
 
 exports[`Chat component check the login is enabled 1`] = `
-<div>
-  <div
-    className="MessageList-messages-2"
-  />
-  <div
-    className="InputBlock-block-7"
-  >
-    <input
-      className="InputBlock-input-9"
-      name="text"
-      onChange={[Function]}
-      onKeyPress={[Function]}
-      placeholder="Name"
-      type="text"
-      value=""
-    />
-    <button
-      className="InputBlock-button-8"
-      onClick={[Function]}
-    >
-      Login
-    </button>
-  </div>
-</div>
+<div
+  className="MessageList-messages-3"
+/>
 `;
