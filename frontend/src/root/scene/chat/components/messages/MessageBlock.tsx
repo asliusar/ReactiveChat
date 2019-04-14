@@ -9,7 +9,7 @@ export interface MessageProps {
     owner: Owner;
 }
 
-const MessageBlock = (props: MessageProps & WithStyles<any>) => {
+const MessageBlock = React.memo((props: MessageProps & WithStyles<any>) => {
     const date = new Date(props.date).toLocaleDateString('en-GB', {
         day: 'numeric',
         month: 'short',
@@ -26,6 +26,6 @@ const MessageBlock = (props: MessageProps & WithStyles<any>) => {
             <div className={props.classes.dateLabel}>{date}</div>
         </section>
     )
-}
+})
 
 export default withStyles(styles)(MessageBlock);
